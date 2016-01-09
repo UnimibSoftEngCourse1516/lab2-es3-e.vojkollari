@@ -5,9 +5,7 @@ import org.hamcrest.MatcherAssert;
 import org.junit.internal.ArrayComparisonFailure;
 import org.junit.internal.ExactComparisonCriteria;
 import org.junit.internal.InexactComparisonCriteria;
-
 import java.util.Comparator;
-
 /**
  * A set of assertion methods useful for writing tests. Only failed assertions
  * are recorded. These methods can be used directly:
@@ -120,6 +118,61 @@ public class Assert {
         } else {
             failNotEquals(message, expected, actual);
         }
+    }
+    
+    
+    public static void assertGreaterThan(byte b1, byte b2,
+            Comparator<Byte> comparator) {
+
+        if (comparator.compare(b1, b2) <= 0)
+            fail("Not greater than");
+    }
+
+    public static void assertGreaterThan(short s1, short s2,
+            Comparator<Short> comparator) {
+
+        if (comparator.compare(s1, s2) <= 0)
+            fail("Not greater than");
+    }
+
+    public static void assertGreaterThan(int i1, int i2,
+            Comparator<Integer> comparator) {
+
+        if (comparator.compare(i1, i2) <= 0)
+            fail("Not greater than");
+    }
+
+    public static void assertGreaterThan(long l1, long l2,
+            Comparator<Long> comparator) {
+
+        if (comparator.compare(l1, l2) <= 0)
+            fail("Not greater than");
+    }
+
+    public static void assertGreaterThan(double d1, double d2,
+            Comparator<Double> comparator) {
+        if (comparator.compare(d1, d2) <= 0)
+            fail("Not greater than");
+    }
+
+    public static void assertGreaterThan(float f1, float f2,
+            Comparator<Float> comparator) {
+        if (comparator.compare(f1, f2) <= 0)
+            fail("Not greater than");
+    }
+    
+    public static void assertGreaterThan(char c1, char c2,
+            Comparator<Character> comparator) {
+
+        if (comparator.compare(c1, c2) <= 0)
+            fail("Not greater than");
+    }
+
+    public static void assertGreaterThan(String s1, String s2,
+            Comparator<String> comparator) {
+
+        if (comparator.compare(s1, s2) <= 0)
+            fail("Not greater than");
     }
     
     public static <T> void assertGreaterThan(T o1, T o2, Comparator<T> comparator){

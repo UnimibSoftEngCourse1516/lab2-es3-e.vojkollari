@@ -15,6 +15,7 @@ import static org.junit.Assert.expectThrows;
 import static org.junit.Assert.fail;
 import static org.junit.Assert.assertGreaterThan;
 
+
 import java.io.IOException;
 import java.math.BigDecimal;
 
@@ -23,15 +24,11 @@ import org.junit.Assert.ThrowingRunnable;
 import org.junit.ComparisonFailure;
 import org.junit.Test;
 import org.junit.internal.ArrayComparisonFailure;
-
 import java.util.Comparator;
 
 /**
  * Tests for {@link org.junit.Assert}
-
  */
-
-
 public class AssertionTest {
 // If you want to use 1.4 assertions, they will be reported correctly.
 // However, you need to add the -ea VM argument when running.
