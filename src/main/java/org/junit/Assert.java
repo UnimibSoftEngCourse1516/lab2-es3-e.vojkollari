@@ -6,6 +6,8 @@ import org.junit.internal.ArrayComparisonFailure;
 import org.junit.internal.ExactComparisonCriteria;
 import org.junit.internal.InexactComparisonCriteria;
 
+import java.util.Comparator;
+
 /**
  * A set of assertion methods useful for writing tests. Only failed assertions
  * are recorded. These methods can be used directly:
@@ -120,6 +122,14 @@ public class Assert {
         }
     }
 
+    
+    public static <T> void assertGreaterThan(T o1, T o2, Comparator<T> comparator){
+        
+        if(comparator.compare(o1, o2) <= 0)
+            fail("Not greater than");
+    }
+    
+    
     private static boolean equalsRegardingNull(Object expected, Object actual) {
         if (expected == null) {
             return actual == null;
